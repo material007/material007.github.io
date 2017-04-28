@@ -1,0 +1,41 @@
+<!doctype>
+<html>
+<head>
+<style type ="text/css">
+<title>material</title>
+</style>
+</head>
+<body>
+<h1 id="bigOne"></h1>
+<form>
+USERNAME: <input type ="text" name ="username" maxlength="6" size = "10" /> <br /></br>
+PASSWORD:<input type ="password" name ="pass"></br></br>
+
+male: <input type ="radio" name ="sex" value="male">
+female: <input type ="radio" name ="sex" value ="female"><br />
+<p>GO ON SUBMIT A FILE:</P>
+<br />
+<input type="submit" value = "SUB">
+
+
+
+</form>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBtQu4kmECTQIR-PbS-x4bVw9lN04VaqKc",
+    authDomain: "material-e3bf0.firebaseapp.com",
+    databaseURL: "https://material-e3bf0.firebaseio.com",
+    storageBucket: "material-e3bf0.appspot.com",
+    messagingSenderId: "509788487225"
+  };
+  firebase.initializeApp(config);
+  var bigOne =document.getElementById('bigOne');
+  var dbRef =firebase.database().ref().child('text');
+  dbref.on('value',snap => bigOne.innerText = snap.val());
+  
+</script>
+</body>
+</html>

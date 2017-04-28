@@ -1,0 +1,321 @@
+<html><head><link rel="stylesheet" href="http://www.skcet.ac.in/css/header.css">
+<link rel="stylesheet" href="http://www.skcet.ac.in/css/superfish.css">
+<script src="http://www.skcet.ac.in/script/superfish.js"></script>
+<script src="http://www.skcet.ac.in/script/jquery.js"></script>
+
+
+<script>
+    $(document).ready(function(){
+        
+        $(".mobile .fa-bars").on('click', function(){
+            $("#mobile_menu").fadeIn();
+            $("#mobile_menu").css("display", "flex");
+        });
+        
+        $("#mobile_menu .fa-close").on('click', function(){
+            $("#mobile_menu").fadeOut();   
+        });
+
+
+    });
+    
+</script>
+
+</head><body><header>
+    <div id="topbar">
+        <a href="http://www.skcet.ac.in/admissions.php" class="remove">Prospective Students</a>
+        <a href="http://www.skcet.ac.in/students.php">Students</a>
+        <a href="http://www.skcet.ac.in/faculty.php">Faculty</a>
+        <a href="#" class="remove">Alumni</a>
+        <a href="http://www.skcet.ac.in/parents.php">Parents</a>
+        <a href="http://www.skcet.ac.in/visit.php">Schedule a Visit</a>
+    </div>
+    
+    <div id="content" class="desktop">
+        <ul class="sf-menu" id="example">
+            <a href="http://www.skcet.ac.in/">
+                <img src="http://www.skcet.ac.in/images/logo.png" height="85px">
+            </a>
+            <li style="text-align: center;">
+                <a href="http://www.skcet.ac.in/index.php">Home</a>
+            </li>
+            <li style="text-align: center;">
+                <a href="http://www.skcet.ac.in/about.php">About</a>
+            </li>
+            <li style="text-align: center;">
+                <a href="http://www.skcet.ac.in/admissions.php">Admissions</a>
+            </li>
+            <li style="text-align: center;">
+                &gt; 
+            </li>
+            <li style="text-align: center;">
+                
+            </li>
+
+           
+            <li style="text-align: center;">
+                <a href="http://www.skcet.ac.in/exams.php">Exams</a>
+            </li>
+            <li style="text-align: center;">
+                <a href="http://www.skcet.ac.in/research.php">Research</a>
+            </li>
+            <li style="text-align: center;">
+                <a href="http://www.skcet.ac.in/campus1.php">Campus Life</a>
+            </li>
+            <div style="clear: both;"></div>
+        </ul>
+    </div>
+    
+    <div id="content" class="mobile">
+        <div>
+            <a href="http://www.skcet.ac.in/">
+                <img class="mobile_logo" src="http://www.skcet.ac.in/images/logo.png" height="60px">
+            </a>
+        </div>
+        <span class="fa fa-bars"></span>
+    </div>
+    
+    <div id="mobile_menu">
+        <span class="fa fa-close"></span>
+        <div>
+            <a href="http://www.skcet.ac.in/">
+                <img src="http://www.skcet.ac.in/images/logo.png" height="90px">
+            </a>
+        </div>
+        <ul>
+            <a href="http://www.skcet.ac.in/index.php">
+                <li style="text-align: center;">
+                    Home
+                </li>
+            </a>
+            <a href="http://www.skcet.ac.in/about.php">
+                <li style="text-align: center;">
+                    About
+                </li>
+            </a>
+            <a href="http://www.skcet.ac.in/admissions.php">
+                <li style="text-align: center;">
+                    Admissions
+                </li>
+            </a>
+            <a href="http://www.skcet.ac.in/departments.php">
+                <li style="text-align: center;">
+                    Departments
+                </li>
+            </a>
+           
+            <a href="http://www.skcet.ac.in/research.php">
+                <li style="text-align: center;">
+                    Research
+                </li>
+            </a>
+            <a href="http://www.skcet.ac.in/exams.php">
+                <li style="text-align: center;">
+                    Exams
+                </li>
+            </a>
+            <a href="http://www.skcet.ac.in/life.php">
+                <li style="text-align: center;">
+                    Campus Life
+                </li>
+            </a>
+        </ul>
+    </div>
+    
+</header>
+
+    
+        <title>Departments</title>
+        <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href="../css/font-awesome.css">
+        <link rel="stylesheet" href="../css/departments.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="../script/jquery.js"></script>
+        <script src="../script/script.js"></script>
+        <script src="../script/department.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".dept_container .overlay").css("height", $(".dept_container .civil").height());
+                $(".dept_hero").css("padding-top", $("header #content").height());
+                $("#dept_dashboard #dept_dashboard_events").css("width", $("#dept_vision").width() + 40 + "px");     
+                $("header .logo").css("height", $("header #content").height() + "px");
+                
+                $(function() {
+                  $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                      var target = $(this.hash);
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                      if (target.length) {
+                        $('html, body').animate({
+                          scrollTop: target.offset().top - $("header").height()
+                        }, 1000);
+                        return false;
+                      }
+                    }
+                  });
+                });
+                
+                var i = 1;
+
+                function slide(){
+                    var images = [
+                        "url('../images/common/1.jpg')", 
+                        "url('../images/common/2.jpg')", 
+                        "url('../images/common/3.jpg')",
+                        "url('../images/common/4.jpg')"
+                    ];    
+
+                    $("#about").css("background-image", images[i]);
+
+                    i = (i + 1) % 4
+
+                }
+
+                setInterval(slide, 4000);
+                $("#about .overlay").css("padding-top", $("header").height());
+            });
+        </script>
+    
+    
+    
+        
+        
+            <div class="overlay" style="padding-top: 75px;">
+                <div>
+                    <br><br>
+                </div>
+                <a href="#depts" style="color: #fff;">
+                    
+                </a>
+            </div>
+        
+        
+        <div id="depts" class="dept_container">
+            <div>
+                <div class="civil">
+                    <a href="civil1.php">
+                        <div class="overlay" style="height: 253px;">
+                            <p>Civil Engineering</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="cse">
+                    <a href="cse1.php">
+                        <div class="overlay" style="height: 253px;">
+                            <p>Computer Science and Engineering</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="eee">
+                    <a href="eee1.php">
+                        <div class="overlay" style="height: 253px;">
+                            <p>Electrical and Electronics Engineering</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="ece">
+                    <a href="ece1.php">
+                        <div class="overlay" style="height: 253px;">
+                            <p>Electronics and Communication Engineering</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="it">
+                    <a href="it1.php">
+                        <div class="overlay" style="height: 253px;">
+                            <p>Information Technology</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="mech">
+                    <a href="mech1.php">
+                        <div class="overlay" style="height: 253px;">
+                            <p>Mechanical Engineering</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class="mct">
+                    <a href="mct1.php">
+                        <div class="overlay" style="height: 253px;">
+                            <p>Mechatronics Engineering</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="mba">
+                    <a href="mba1.php">
+                        <div class="overlay" style="height: 253px;">
+                            <p>School of Management</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="mca">
+                    <a href="mca1.php">
+                        <div class="overlay" style="height: 253px;">
+                            <p>Master of Computer Applications</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+
+<link rel="stylesheet" href="http://www.skcet.ac.in/css/footer.css">
+
+<footer>
+    <div class="flex">
+
+        <div class="border first">
+            <img src="http://www.skcet.ac.in/images/footer%20logo.png" width="80%"><br><br>
+            
+            <p><span class="fa fa-map-marker"></span>Coimbatore, Tamil Nadu.</p><br>
+            <p><span class="fa fa-phone"></span>0422-2678001 (7 Lines)</p><br><br>
+            <a href="https://www.facebook.com/skcetofficial/"><img src="http://www.skcet.ac.in/images/social/fb.png" width="32px"></a>
+            <a href="#"><img src="http://www.skcet.ac.in/images/social/twitter.png" width="32px"></a>
+            <a href="mailto:info@skcet.ac.in"><img src="http://www.skcet.ac.in/images/social/gmail.png" width="32px"></a>
+            <a href="https://www.instagram.com/skcet.official/"><img src="http://www.skcet.ac.in/images/social/insta.png" width="32px"></a>
+        </div>
+
+        <div class="links border">
+            <p>Sri Krishna Institutions</p>
+            <p><a href="http://skct.edu.in">Sri Krishna College of Technology</a></p>
+            <p><a href="http://skasc.ac.in">Sri Krishna Arts and Science College</a></p>
+            <p><a href="http://skacas.ac.in">Sri Krishna Adithya College of Arts and Science</a></p>
+            <p><a href="http://skptc.srikrishna.ac.in">Sri Krishna Polytechnic College</a></p>
+        </div>
+
+        <div class="links border">
+            <p>Links</p>
+            <p><a href="http://naac.gov.in">NAAC</a></p>
+            <p><a href="http://nbaind.org">NBA</a></p>
+            <p><a href="http://aicte-india.org">AICTE</a></p>
+            <p><a href="http://ugc.ac.in">UGC</a></p>
+            <p><a href="http://annauniv.edu">Anna University</a></p>
+        </div>
+
+        <div class="links last">
+            <p>Links</p>
+            
+            <p><a href="http://www.skcet.ac.in/pdf/skcetib2016.pdf">College Brochure</a></p>
+            <p><a href="http://www.skcet.ac.in/pdf/placerec.jpg">Placement Record</a></p>
+            <p><a href="http://www.skcet.ac.in/pdf/servicerules.pdf">Service Rule Book</a></p>
+            <p><a href="http://www.skcet.ac.in/pdf/leaverules.pdf">Leave Rules</a></p>
+            <p><a href="http://www.skcet.ac.in/pdf/aqar_report_15_16.pdf">AQAR Report 2015-16</a></p>
+            <p><a href="http://www.skcet.ac.in/nirf.php">NIRF Data Sheet</a></p>
+            <p><a href="https://skcet.almaconnect.com/signin">SKCET-Alma Connect</a></p>
+            
+        </div>
+
+    </div>
+</footer>
+<div class="bottom_bar">
+    <p>© 2017. All Rights Reserved. SKCET. Designed and Maintained by <a href="http://www.skcet.ac.in/team.php">Web Team</a>, SKCET.</p>
+</div>        
+    
+    
+</body></html>

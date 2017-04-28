@@ -1,0 +1,258 @@
+
+
+<link rel = "stylesheet" href = "http://www.skcet.ac.in/css/header.css">
+<link rel = "stylesheet" href = "http://www.skcet.ac.in/css/superfish.css">
+<script src = "http://www.skcet.ac.in/script/superfish.js"></script>
+<script src = "http://www.skcet.ac.in/script/jquery.js"></script>
+
+
+
+    
+
+
+<header>
+    <div id = "topbar">
+        
+        <a href = "index.html">Back</a>
+    </div>
+    
+       
+    
+    <div id = "content" class = "mobile">
+        <div>
+            <a href = "http://www.skcet.ac.in/">
+                <img class = "mobile_logo" src = "http://www.skcet.ac.in/images/logo.png" height = "60px">
+            </a>
+        </div>
+        <span class = "fa fa-bars"></span>
+    </div>
+    
+    <div id = "mobile_menu">
+        <span class = "fa fa-close"></span>
+        <div>
+            <a href = "http://www.skcet.ac.in/">
+                <img src = "http://www.skcet.ac.in/images/logo.png" height = "90px">
+            </a>
+        </div>
+        <ul>
+            <a href = "http://www.skcet.ac.in/index.php">
+                <li style = "text-align: center;">
+                    Home
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/about.php">
+                <li style = "text-align: center;">
+                    About
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/admissions.php">
+                <li style = "text-align: center;">
+                    Admissions
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/departments.php">
+                <li style = "text-align: center;">
+                    Departments
+                </li>
+            </a>
+           
+            <a href = "http://www.skcet.ac.in/research.php">
+                <li style = "text-align: center;">
+                    Research
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/exams.php">
+                <li style = "text-align: center;">
+                    Exams
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/life.php">
+                <li style = "text-align: center;">
+                    Campus Life
+                </li>
+            </a>
+        </ul>
+    </div>
+    
+</header>
+<html>
+    <head>
+        <title>Departments</title>
+        <link rel = "stylesheet" href = "../css/header.css">
+        <link rel = "stylesheet" href = "../css/bootstrap.css">
+        <link rel = "stylesheet" href = "../css/font-awesome.css">
+        <link rel = "stylesheet" href = "../css/departments.css">
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="../script/jquery.js"></script>
+        <script src="../script/script.js"></script>
+        <script src="../script/department.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".dept_container .overlay").css("height", $(".dept_container .civil").height());
+                $(".dept_hero").css("padding-top", $("header #content").height());
+                $("#dept_dashboard #dept_dashboard_events").css("width", $("#dept_vision").width() + 40 + "px");     
+                $("header .logo").css("height", $("header #content").height() + "px");
+                
+                $(function() {
+                  $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                      var target = $(this.hash);
+                      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                      if (target.length) {
+                        $('html, body').animate({
+                          scrollTop: target.offset().top - $("header").height()
+                        }, 1000);
+                        return false;
+                      }
+                    }
+                  });
+                });
+                
+                var i = 1;
+
+                function slide(){
+                    var images = [
+                        "url('../images/common/1.jpg')", 
+                        "url('../images/common/2.jpg')", 
+                        "url('../images/common/3.jpg')",
+                        "url('../images/common/4.jpg')"
+                    ];    
+
+                    $("#about").css("background-image", images[i]);
+
+                    i = (i + 1) % 4
+
+                }
+
+                setInterval(slide, 4000);
+                $("#about .overlay").css("padding-top", $("header").height());
+            });
+        </script>
+    </head>
+    
+    <body>
+        
+        <div id = "about">
+            <div class = "overlay">
+                <div>
+                    <p class = "title">Departments</p><br><br>
+                </div>
+                <a href = "#depts" style = "color: #fff;">
+                    <div class = "button">
+                        See More
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <div id = "depts" class = "dept_container">
+            <div>
+                <div class = "civil">
+                    <a href = "https://drive.google.com/drive/folders/0B_Ov0xBa28N6b2JfUXVyNzhXUFU?usp=sharing">
+                        <div class = "overlay">
+                            <p>Civil Engineering</p></br>
+                        </div>
+                    </a>
+                </div>
+                <div class = "cse">
+                    <a href = "cs.html">
+                        <div class = "overlay">
+                            <p>Computer Science and Engineering</p></br>
+                        </div>
+                    </a>
+                </div>
+                <div class = "eee">
+                    <a href = "https://drive.google.com/drive/folders/0B_Ov0xBa28N6dlFzMEtPQjFsUnM?usp=sharing">
+                        <div class = "overlay">
+                            <p>Electrical and Electronics Engineering</p></br>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class = "ece">
+                    <a href = "https://drive.google.com/drive/folders/0B_Ov0xBa28N6endNLVp1dC1ubEU?usp=sharing">
+                        <div class = "overlay">
+                            <p>Electronics and Communication Engineering</p></br>
+                        </div>
+                    </a>
+                </div>
+                <div class = "it">
+                    <a href = "https://drive.google.com/drive/folders/0B_Ov0xBa28N6QURrS1NIN1hsbHc?usp=sharing">
+                        <div class = "overlay">
+                            <p>Information Technology</p></br>
+                        </div>
+                    </a>
+                </div>
+                <div class = "mech">
+                    <a href = "https://drive.google.com/drive/folders/0B_Ov0xBa28N6Q1JCZEx1VnpDbDg?usp=sharing">
+                        <div class = "overlay">
+                            <p>Mechanical Engineering</p></br>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <div class = "mct">
+                    <a href = "https://drive.google.com/drive/folders/0B_Ov0xBa28N6ek5ZaE5aa0VXWWc?usp=sharing">
+                        <div class = "overlay">
+                            <p>Mechatronics Engineering</p></br>
+                        </div>
+                    </a>
+                </div>
+               
+        </div>
+        
+        
+
+<link rel = "stylesheet" href = "http://www.skcet.ac.in/css/footer.css">
+
+<footer>
+    <div class = "flex">
+
+        <div class = "border first">
+            <img src = "http://www.skcet.ac.in/images/footer%20logo.png" width = "80%"><br><br>
+            
+            <p><span class = "fa fa-map-marker"></span>Coimbatore, Tamil Nadu.</p><br>
+            <p><span class = "fa fa-phone"></span>0422-2678001 (7 Lines)</p><br><br>
+            <a href = "https://www.facebook.com/skcetofficial/"><img src = "http://www.skcet.ac.in/images/social/fb.png" width = "32px"></a>
+            <a href = "#"><img src = "http://www.skcet.ac.in/images/social/twitter.png" width = "32px"></a>
+            <a href = "mailto:info@skcet.ac.in"><img src = "http://www.skcet.ac.in/images/social/gmail.png" width = "32px"></a>
+            <a href = "https://www.instagram.com/skcet.official/"><img src = "http://www.skcet.ac.in/images/social/insta.png" width = "32px"></a>
+        </div>
+
+        <div class = "links border">
+            <p>Sri Krishna Institutions</p>
+            <p><a href = "http://www.skcet.ac.in/">Sri Krishna College  Engineering and Technology</a></p>
+            
+        </div>
+
+        <div class = "links border">
+            <p>Links</p>
+            <p><a href = "http://naac.gov.in">NAAC</a></p>
+            <p><a href = "http://nbaind.org">NBA</a></p>
+            <p><a href = "http://aicte-india.org">AICTE</a></p>
+            <p><a href = "http://ugc.ac.in">UGC</a></p>
+            <p><a href = "http://annauniv.edu">Anna University</a></p>
+        </div>
+
+        <div class = "links last">
+            <p>Links</p>
+            
+            <p><a href = "https://www.tcyonline.com/tests/upsc">UPSC QUESTION PAPERS</a></p>
+            
+            <p><a href = "http://www.gate.iitr.ernet.in">GATE PAPERS</a></p>
+			<p><a href = "https://www.ets.org/toefl/pbt/prepare">TOEFL PAPERS</a></p>
+			
+		
+            
+        </div>
+
+    </div>
+</footer>
+<div class = "bottom_bar">
+    <p></p>
+</div>        
+    </body>
+    
+</html>

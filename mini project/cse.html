@@ -1,0 +1,1641 @@
+
+<link rel = "stylesheet" href = "http://www.skcet.ac.in/css/header.css">
+<link rel = "stylesheet" href = "http://www.skcet.ac.in/css/superfish.css">
+<script src = "http://www.skcet.ac.in/script/superfish.js"></script>
+<script src = "http://www.skcet.ac.in/script/jquery.js"></script>
+
+
+<script>
+    $(document).ready(function(){
+        
+        $(".mobile .fa-bars").on('click', function(){
+            $("#mobile_menu").fadeIn();
+            $("#mobile_menu").css("display", "flex");
+        });
+        
+        $("#mobile_menu .fa-close").on('click', function(){
+            $("#mobile_menu").fadeOut();   
+        });
+
+
+    });
+    
+</script>
+
+<header>
+    <div id = "topbar">
+        <a href = "http://www.skcet.ac.in/admissions.php" class = "remove">Prospective Students</a>
+        <a href = "http://www.skcet.ac.in/students.php">Students</a>
+        <a href = "http://www.skcet.ac.in/faculty.php">Faculty</a>
+        <a href = "#" class = "remove">Alumni</a>
+        <a href = "http://www.skcet.ac.in/parents.php">Parents</a>
+        <a href = "http://www.skcet.ac.in/visit.php">Schedule a Visit</a>
+    </div>
+    
+    <div id = "content" class = "desktop">
+        <ul class = "sf-menu" id = "example">
+            <a href = "http://www.skcet.ac.in/">
+                <img src = "http://www.skcet.ac.in/images/logo.png" height = "85px">
+            </a>
+            <li style = "text-align: center;">
+                <a href = "http://www.skcet.ac.in/index.php">Home</a>
+            </li>
+            <li style = "text-align: center;">
+                <a href = "http://www.skcet.ac.in/about.php">About</a>
+            </li>
+            <li style = "text-align: center;">
+                <a href = "http://www.skcet.ac.in/admissions.php">Admissions</a>
+            </li>
+            <li style = "text-align: center;">
+                <a href = "http://www.skcet.ac.in/departments">Departments</a> 
+            </li>
+            <li style = "text-align: center;">
+                <a href = "http://www.skcet.ac.in/placement.php">Placements</a>
+            </li>
+
+           
+            <li style = "text-align: center;">
+                <a href = "http://www.skcet.ac.in/exams.php">Exams</a>
+            </li>
+            <li style = "text-align: center;">
+                <a href = "http://www.skcet.ac.in/research.php">Research</a>
+            </li>
+            <li style = "text-align: center;">
+                <a href = "http://www.skcet.ac.in/campus1.php">Campus Life</a>
+            </li>
+            <div style = "clear: both;"></div>
+        </ul>
+    </div>
+    
+    <div id = "content" class = "mobile">
+        <div>
+            <a href = "http://www.skcet.ac.in/">
+                <img class = "mobile_logo" src = "http://www.skcet.ac.in/images/logo.png" height = "60px">
+            </a>
+        </div>
+        <span class = "fa fa-bars"></span>
+    </div>
+    
+    <div id = "mobile_menu">
+        <span class = "fa fa-close"></span>
+        <div>
+            <a href = "http://www.skcet.ac.in/">
+                <img src = "http://www.skcet.ac.in/images/logo.png" height = "90px">
+            </a>
+        </div>
+        <ul>
+            <a href = "http://www.skcet.ac.in/index.php">
+                <li style = "text-align: center;">
+                    Home
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/about.php">
+                <li style = "text-align: center;">
+                    About
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/admissions.php">
+                <li style = "text-align: center;">
+                    Admissions
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/departments.php">
+                <li style = "text-align: center;">
+                    Departments
+                </li>
+            </a>
+           
+            <a href = "http://www.skcet.ac.in/research.php">
+                <li style = "text-align: center;">
+                    Research
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/exams.php">
+                <li style = "text-align: center;">
+                    Exams
+                </li>
+            </a>
+            <a href = "http://www.skcet.ac.in/life.php">
+                <li style = "text-align: center;">
+                    Campus Life
+                </li>
+            </a>
+        </ul>
+    </div>
+    
+</header>
+<html>
+    <head>
+        <title>Computer Science and Engineering</title>
+        <link rel = "stylesheet" href = "../css/header.css">
+        <link rel = "stylesheet" href = "../css/bootstrap.css">
+        <link rel = "stylesheet" href = "../css/font-awesome.css">
+        <link rel = "stylesheet" href = "../css/departments/cse.css">
+        <link rel = "stylesheet" href = "../css/slide.css">
+        <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <script src="../script/jquery.js"></script>
+        <script src="../script/script.js"></script>
+        <script src="../script/department.js"></script>
+        <script>
+            $(window).load(function(){
+    
+                $(".quick_links").css("height", $("#slider").height());
+                $(".news_container").css("height", $(".about_dept").height());
+                $(".vision_dept").css("height", $(".mission_dept").height());
+                $("#dept_dashboard_video").css("height", $("#dept_dashboard_dashboard").height() + 20);
+                
+            });
+            $(document).ready(function(){
+                
+                
+                $(".dept_hero").css("margin-top", $("header #content").height());
+                
+               
+                
+                var images = [
+                    "url('../departments/cse_events/1.jpg')",
+                    "url('../departments/cse_events/2.jpg')",
+                ];
+                
+                i = 1;
+                
+                function event_slider(){
+                    $("#slider").css("background-image", images[i]);
+                    $("#slider .title_p").html(title[i]);
+                    $("#slider .excerpt").html(excerpt[i]);
+                    i = (i + 1) % 2;
+                }
+                
+                setInterval(event_slider, 2000);
+                
+            });
+        </script>
+    </head>
+    
+    <body id = "departments_page">
+        
+        <div id = "dept_hero" class = "dept_hero">
+            <div class = "overlay">
+                <p>Department of Computer Science and Engineering</p>
+            </div>
+        </div>
+        
+        <div id = "strip" class = "strip">
+            <div class = "row">
+                <div class = "home">
+                    <a class = "dept_home_page" href = "#strip">
+                        <div class = "overlay">
+                            <p>Home</p><br>
+                            <p>Get to know more about the department</p>
+                        </div>
+                    </a>
+                </div>
+                <div class = "peo">
+                    <a href = "#strip" class = "dept_peo">
+                        <div class = "overlay">
+                            <p>PO and PEO's</p><br>
+                            <p>Get to know about our Programme Objectives</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "curriculum">
+                    <a href = "#strip" class = "dept_syllabus">
+                        <div class = "overlay">
+                            <p>Curriculum</p><br>
+                            <p>Get to know more about what you'll learn once you enter the department</p>
+                        </div>
+                    </a>
+                </div>
+                <div class = "placements">
+                    <a href = "#strip" class = "dept_placement">
+                        <div class = "overlay">
+                            <p>Placements</p><br>
+                            <p>Get to know about our Department's placements</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class = "row">
+                <div class = "faculty">
+                    <a href = "#strip" class = "dept_faculty">
+                        <div class = "overlay">
+                            <p>Faculty</p><br>
+                            <p>Get to know more about the people holding down the fort</p>
+                        </div>
+                    </a>
+                </div>
+                <div class = "infrastructure">
+                    <a class = "dept_lab" href = "#strip">
+                        <div class = "overlay">
+                            <p>Infrastructure</p><br>
+                            <p>Get to know more about our state of the art faculties and laboratories</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class = "content">
+            <div class = "main">
+                
+                <div id = "dept_home_page">
+                    
+                    <div id = "dept_details">
+                        <div class = "row">
+                            <div class = "col-md-7 col_content_parent">
+                                <div id = "slider" class = "col_content" style = "background-image: url('../departments/cse_events/1.jpg'); height: 400px;">
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class = "col-md-5 col_content_parent quick_links" id = "strip" style = "padding-left: 20px;">
+                                <div class = "col_content" style = "height: 100%;">
+                                    <p class = "title">Quick Links</p>
+                                    <a href = "http://www.skcet.ac.in/departments/index.php"><div class = "quick_link_button">Department Home</div></a>
+                                    <a href = "http://www.skcet.ac.in/departments/csehigh.php"><div class = "quick_link_button">Department Highlights</div></a>
+                                    <a href = "http://www.skcet.ac.in/departments/pdf/csestudent.pdf"><div class = "quick_link_button">Student Achievement</div></a>
+                                    <a href = "http://www.skcet.ac.in/departments/pdf/csevac.pdf"><div class = "quick_link_button">Value Added Courses</div></a>
+                                    <a href = "http://www.skcet.ac.in/departments/pdf/csemou.pdf"><div class = "quick_link_button">MOU's Signed</div></a>
+                                    <a href = "http://www.skcet.ac.in/researchdoc/cse.pdf"><div class = "dept_peo quick_link_button">Research and Development</div></a>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div id = "dept_details">
+                        <div class = "row">
+                            <div class = "col-md-7 col_content_parent about_dept">
+                                <div class = "col_content">
+                                    <p class = "title">About</p>
+                                    <br>
+                                    <p>The Department of Computer Science and Engineering is committed to provide the state-of-art technical education to the tomorrow's technocrats and software professionals through dedicated quality teaching. The department is also accredited by NBA & AICTE and it strives to provide ample opportunity to the students for exploring and exploiting new avenues in the field of IT. The Department offers one undergraduate course in Computer Science and Engineering and two PG courses (Computer Science and Engineering, Software Engineering) and is a recognized Research Centre of Anna University. The department has excellent infrastructure facilities with highly qualified and devoted faculty members having specialization in the areas of Cloud Computing, Image Processing, Wireless networks, Soft Computing, Mobile Computing, Data Mining, Web Technologies etc. The placement record of the department is phenomenal. Our students are recruited by companies like Amazon, Zoho, Robert Bosch, Accenture, HP, CTS, Infosys, WIPRO, HCL etc.,</p>
+                                </div>
+                            </div>
+                            
+                            <div class = "col-md-5 col_content_parent news_container" style = "padding-left: 20px;">
+                                <div id = "news" class = "col_content" style = "height: 100%;">
+                                    <p class = "title">News and Events</p>
+                                    <br>
+                                    <marquee direction = "up">
+                                        <ul>
+                                            <li>
+                                                <div class = "date">
+                                                    <p class = "month">FEB</p>
+                                                    <p class = "day">10</p>
+                                                </div>
+                                                <p>One day Workshop on Big Data Analytics</p>
+                                                <div class = "clear"></div>
+                                            </li>
+                                            <li><div class = "date">
+                                                    <p class = "month">FEB</p>
+                                                    <p class = "day">11</p>
+                                                </div>
+                                                <p>One day Workshop on No SQL-MongoDB for III CSE </p>
+                                                <div class = "clear"></div>
+                                            </li>
+                                            <li>
+                                                <div class = "date">
+                                                    <p class = "month">FEB</p>
+                                                    <p class = "day">11</p>
+                                                </div>
+                                                <p>In-house Web Designing using Open Source Tools</p>
+                                                <div class = "clear"></div>
+                                            </li>
+                                            <li>
+                                                <div class = "date">
+                                                    <p class = "month">FEB</p>
+                                                    <p class = "day">24</p>
+                                                </div>
+                                                <p>One day Workshop on Machine Learning</p>
+                                                <div class = "clear"></div>
+                                            </li>
+                                        </ul>
+                                    </marquee>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                
+                    <div id = "dept_details">
+                        <div class = "row">
+                            <div class = "col-md-7 col_content_parent mission_dept">
+                                <div class = "col_content">
+                                    <p class = "title">Mission</p>
+                                    <br>
+                                    <p>1. To develop Human Resources who can impart knowledge in computing</p><br>
+                                    <p>2. To impart necessary professional skills through student enrichment programme</p><br>
+                                    <p>3. To inculcate strong ethical values among students</p>
+                                </div>
+                            </div>
+                            
+                            <div class = "col-md-5 col_content_parent vision_dept" style = "padding-left: 20px;">
+                                <div class = "col_content" style = "height:100%;">
+                                    <p class = "title">Vision</p>
+                                    <br>
+                                    <p>To prepare professionals with high academic and ethical values who will contribute to the computational world</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id = "dept_dashboard" class = "row">
+                        <div id = "dept_dashboard_dashboard" class = "col-md-7">
+                            <div>
+                                <p>Dashboard</p>
+                                <br>
+                                <table class = "table table-striped table-bordered">
+                                    <tr>
+                                        <td>Programme</td>
+                                        <td>B.E CSE</td>
+                                        <td>M.E CSE</td>
+                                        <td>M.E SE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Year of Starting</td>
+                                        <td>1998</td>
+                                        <td>2004</td>
+                                        <td>2011</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sanctioned Intake</td>
+                                        <td>180</td>
+                                        <td>24</td>
+                                        <td>18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student Strength</td>
+                                        <td>828</td>
+                                        <td>48</td>
+                                        <td>18</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Faculty Strength</td>
+                                        <td>39</td>
+                                        <td>4</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Number of Labs</td>
+                                        <td>5</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Top Recruiters</td>
+                                        <td colspan = "3">Amazon, Zoho, Infosys, Accenture, Cognizant, WIPRO</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        
+                        <div id = "dept_dashboard_video" class = "col-md-5" style = "padding-left: 20px !important;">
+                            <div style = "height:100%;">
+                                <p>Video</p><br>
+                                <iframe width="100%" height="300" src="https://www.youtube.com/embed/gx1PWcS0P3Q" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id = "dept_peo">
+                    <p class = "title">Programme Educational Objectives</p>
+                    <br>
+                    <table class = "table table-striped table-bordered">
+                        <tr>
+                            <td>PEO1</td>
+                            <td>Graduates will have successful careers in industry that meet the needs of Indian and multinational companies.</td>
+                        </tr>
+                        <tr>
+                            <td>PEO2</td>
+                            <td>Graduates will solve problems in computer science and engineering by applying mathematical, scientific and engineering fundamentals and also to pursue higher studies.</td>
+                        </tr>
+                        <tr>
+                            <td>PEO3</td>
+                            <td>Graduates will comprise good scientific and engineering breadth so as to comprehend, analyze, design and create novel products and solutions for the real life problems.</td>
+                        </tr>
+                        <tr>
+                            <td>PEO4</td>
+                            <td>Graduates will possess professional and ethical attitude, effective communication skills, team working skills, multi-disciplinary approach and an ability to relate engineering issues to broader social context.</td>
+                        </tr>
+                        <tr>
+                            <td>PEO5</td>
+                            <td>Graduates will exhibit leadership qualities and progress through life-long learning.</td>
+                        </tr>
+                    </table>
+                    <br><br>
+                    <p class = "title">Programme Outcomes</p>
+                    <br>
+                    <table class = "table table-striped table-bordered">
+                        <tr>
+                            <td>PO-A</td>
+                            <td>Apply knowledge of mathematics, science and engineering fundamentals to solve problems in computer science and engineering.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-B</td>
+                            <td>Identify, formulate, and analyze problems in computer science and engineering.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-C</td>
+                            <td>Demonstrate an ability to analyze and design software systems.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-D</td>
+                            <td>Demonstrate an ability to analyze and design hardware systems.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-E</td>
+                            <td>Demonstrate an ability to visualize and work on multi-disciplinary tasks including project management and finance.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-F</td>
+                            <td>Create, select and apply appropriate techniques, resources and modern engineering and IT tools.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-G</td>
+                            <td>Apply reasoning through contextual knowledge to assess societal and environmental issues and assignment of consequent responsibilities with ethical engineering practice.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-H</td>
+                            <td>Comprehend, write effective reports / design documents of the projects towards an effective presentation through group communication.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-I</td>
+                            <td>Assess the impact of professional engineering solutions with societal and environmental contexts and be aware of contemporary issues.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-J</td>
+                            <td>Recognize the need for engaging in lifelong learning.</td>
+                        </tr>
+                        <tr>
+                            <td>PO-K</td>
+                            <td>Participate and succeed in competitive examinations like GATE, GRE, CAT.</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id = "dept_syllabus">
+                    <p class = "title">Syllabus</p>
+                    <br>
+                    <p class = "paragraph">
+                        1. <a href = "http://www.skcet.ac.in/departments/syllabus/r2011becse.pdf">R 2011 -B.E Computer Science and Engineering</a><br>
+                         2. <a href = "http://www.skcet.ac.in/departments/syllabus/r2015becse.pdf">R 2015 -B.E Computer Science and Engineering</a><br>
+                          3. <a href = "http://www.skcet.ac.in/departments/syllabus/r2016becse.pdf">R 2016 -B.E Computer Science and Engineering</a><br>
+                        4. <a href = "http://www.skcet.ac.in/departments/syllabus/r2015mecse.pdf">R 2015-M.E Computer Science and Engineering</a><br>
+                        5. <a href = "http://www.skcet.ac.in/departments/syllabus/r2015mese.pdf">R 2016 -M.E Software Engineering</a>
+                    </p>
+                </div>
+                
+                <div id = "dept_lab">
+                    <p class = "title">Laboratory Details</p>
+                    <br>
+                    <table class = "table table-striped table-bordered">
+                        <tr>
+                            <td>S.No.</td>
+                            <td>Name</td>
+                            <td>Configuration</td>
+                            <td>No. of Systems</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>Alan Kay</td>
+                            <td>Lenovo Think Center M72e,Intel Core i3 3rd Gen 3220 Processor,Intel H61 Express Chipset Motherboard,4GB DDR3 RAM @ 133 Mhz,500GB HDD@7200 RPM, 18.5"Flat Panel Monitor</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>Nikalus Wirth</td>
+                            <td>Intel(R) Core(TM)2 Quad CPU Q8400 @2.66GHz, 4 GB RAM,18.5 " wide Screen TFT Monitor</td>
+                            <td>75</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>John Backus</td>
+                            <td>INTEL&reg; CoreTM2 Quad CPU8200 @ 2.33 GHz, 2 GB RAM, 250 GB Hard disk, 19"TFT Color Monitor Dell Optiplex 380,INTEL&reg; Core TM2 Quad Q8400 2.66 GHz, 2x2 GB RAM, 250 GB Hard disk</td>
+                            <td>28</td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>Edger F Codd</td>
+                            <td>Lenovo Think Centre M72E, Intel Core i3 3rd Gen,3220 Processor,4GB DDR3 RAM,500 GB HDD, RPM 18.5" Flat Monitor</td>
+                            <td>75</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>5.</td>
+                            <td>Ken Thompson</td>
+                            <td>Dell optiplex Gx 520:intel core tm 2cpu 4400@2.00GHz, 80GB HDD,DDR2 1GB* 2RAM 17.5 uitrasharp flat panel Digital LCDmonitor fronttech mouse and 104 keys keyboard</td>
+                            <td>75</td>
+                        </tr>
+
+                        <tr>
+                            <td>6.</td>
+                            <td>IoT Lab</td>
+                            <td>LenovoS510 Disktop(10K*A0041H)Intelcore i3-6100 6th gen Processors intel H110 chipset Motherboard 8GB DDR4 Ram 500GB@7200Rpm Sata HDD keyboard/Optical Mouse </td>
+                            <td>30</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id = "dept_highlights">
+                    <p class = "title">Department Highlights</p>
+                    <br>
+                    <ul style=disc>
+                    <li>Syllabus benchmarked with premier institutions/Universities like Anna University Chennai, PSG College of Technology, Thiagarajar College of Engineering and various foreign universities.</li>
+                    <li>Feedback is obtained from Alumni and Employers for the enhancement of Teaching Learning Process for the betterment of students.</li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    </ul>
+                </div>
+                
+                <div id = "dept_placement">
+                    <p class = "title">Placements Record</p>
+                    <br>
+                    <table class = "table table-striped table-bordered">
+                        <tr>
+                            <td>Year</td>
+                            <td>2015-16</td>
+                            <td>2014-15</td>
+                            <td>2013-14</td>
+                            <td>2012-13</td>
+                            <td>2011-12</td>
+                        </tr>
+                        <tr>
+                            <td>Number of Eligible Students</td>
+                            <td>129</td>
+                            <td>111</td>
+                            <td>98</td>
+                            <td>94</td>
+                            <td>130</td>
+                        </tr>
+                        <tr>
+                            <td>Number of Students Placed</td>
+                            <td>90</td>
+                            <td>86</td>
+                            <td>64</td>
+                            <td>80</td>
+                            <td>121</td>
+                        </tr>
+                        <tr>
+                            <td>Number of Students Self Employed / Higher Studies</td>
+                            <td>10</td>
+                            <td>7</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>7</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div id="dept_faculty">
+<div class="container">
+  <div class="page-title clearfix">
+    <div class="row">
+      <div class="col-md-12">
+        <h3 align="center" class="cb">Faculty Details</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <table class = "table table-striped table-bordered">
+
+<tr>
+<td>S.No.</td>
+<td>Name</td>
+<td>Designation</td>
+</tr>
+<tr>
+
+<tr>
+<td>1</td>
+<td>Dr. Ilango Krishnamurthi</td>
+<td>Dean</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Dr. S. J. K. Jagadeesh Kumar</td>
+<td>Professor & Head</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Dr. S. Chandrasekaran</td>
+<td>Professor</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Dr. S. Chandrakala</td>
+<td>Professor</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>Dr. D. Surendran</td>
+<td>Professor</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>Dr. M. Sujaritha</td>
+<td>Professor</td>
+</tr>
+
+<tr>
+<td>7</td>
+<td>Dr. D. Prabha</td>
+<td>Professor</td>
+</tr>
+
+
+<tr>
+<td>8</td>
+<td>Mr. V. Muneeswaran</td>
+<td>Associate Professor</td>
+</tr>
+
+
+<tr>
+<td>9</td>
+<td>Dr. K. Manikandan</td>
+<td>Associate Professor</td>
+</tr>
+
+
+<tr>
+<td>10</td>
+<td>Ms. K. Devi Priya</td>
+<td>Associate Professor</td>
+</tr>
+
+
+<tr>
+<td>11</td>
+<td>Mr. R. Balaji</td>
+<td>Associate Professor</td>
+</tr>
+
+
+<tr>
+<td>12</td>
+<td>Ms. Madhumitha. R</td>
+<td>Associate Professor</td>
+</tr>
+
+
+<tr>
+<td>13</td>
+<td>Mr. R. Manikandan</td>
+<td>Associate Professor</td>
+</tr>
+
+<tr>
+<td>14</td>
+<td>Mr. A. Arunkumar</td>
+<td>Associate Professor</td>
+</tr>
+
+<tr>
+<td>15</td>
+<td>Ms. Arun Anto</td>
+<td>Associate Professor</td>
+</tr>
+
+<tr>
+<td>16</td>
+<td>Ms. P. Chitra</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>17</td>
+<td>Ms. A. Pushpalatha</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>18</td>
+<td>Ms. N. Kousika</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>19</td>
+<td>Mr. D. Mansoor Hussian</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>20</td>
+<td>Ms. T. Santhiya</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>21</td>
+<td>Mr. M. Karthikeyan</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>22</td>
+<td>Mr. S. Sudhakar Ilango</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>23</td>
+<td>Ms. A. Sumithra</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>24</td>
+<td>Ms. S. Muruga Malathi</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>25</td>
+<td>Ms. K Mageswari </td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>26</td>
+<td>Ms. S Mohana Gowri</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>27</td>
+<td>Ms. D. Ramya</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>28</td>
+<td>Ms. M. Indira Priyadharshini</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>29</td>
+<td>Ms. S. Shunmuga Priya</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>30</td>
+<td>Ms. S. Pradeepa</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>31</td>
+<td>Ms. B. Sophia</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>32</td>
+<td>Ms. M. Rohini</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>33</td>
+<td>Ms. P. Anitha </td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>34</td>
+<td>Ms. S. Deepika </td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>35</td>
+<td>Ms. V.R. Azhaguramyaa</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>36</td>
+<td>Ms. Sudharani. S</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>37</td>
+<td>Mr. Senathipathi. K</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>38</td>
+<td>Ms. Keerthi. R</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>39</td>
+<td>Ms. Dhivya. S</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>40</td>
+<td>Ms. Nithya. M</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>41</td>
+<td>Ms. J. Sharmilla</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>42</td>
+<td>Ms. M. Anandapriya</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>43</td>
+<td>Ms. N. Pooranam</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>44</td>
+<td>Mr. R. Prakash</td>
+<td>Asst. Professor</td>
+</tr>
+
+<tr>
+<td>45</td>
+<td>Mr. A. Ashwin</td>
+<td>Asst. Professor</td>
+</tr>
+
+
+<tr>
+<td>46</td>
+<td>Mr. K. Nirmalkumar</td>
+<td>Asst. Professor</td>
+</tr>
+
+
+</table>
+</div>
+                
+               <!-- <div id = "dept_faculty">
+                    <p class = "title">Faculty</p>
+                    <br>
+                    <div class = "teachers">
+
+
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/1.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/1.pdf">Dr.Ilango Krishnamurthi</a></p><br>
+                                <p class = "teacher_designation">Dean - CSE & Research and Consultancy</p>
+                                <p class = "working_on"><b>Area of Specialization : </b>Semantic Web, AI & Machine Learning</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601307</p>
+                                <p><span class = "fa fa-envelope"></span> ik@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/2.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/2.pdf">Dr SJK Jagadeesh Kumar</a></p><br>
+                                <p class = "teacher_designation">Head of the Department</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Networking</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601308</p>
+                                <p><span class = "fa fa-envelope"></span> sjkjk@skcet.ac.in </p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/3.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/3.pdf">Dr. S Chandrasekaran</a></p><br>
+                                <p class = "teacher_designation">Professor </p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Fault Tolerant Computing </p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402604043</p>
+                                <p><span class = "fa fa-envelope"></span> chandrasekaran_s@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/4.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/4.pdf">Dr. D. Surendran</a></p><br>
+                                <p class = "teacher_designation">Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Grid Computing,IOT,Cloud</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601456</p>
+                                <p><span class = "fa fa-envelope"></span> surendran@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/5.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/5.pdf">Dr. S. Chandrakala</a></p><br>
+                                <p class = "teacher_designation">Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Machine Learning</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402604042</p>
+                                <p><span class = "fa fa-envelope"></span> chandrakalas@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/6.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/6.pdf">Dr. M. Sujaritha</a></p><br>
+                                <p class = "teacher_designation">Associate Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Image processing and machine learning</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601457</p>
+                                <p><span class = "fa fa-envelope"></span> sujaritham@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/7.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/7.pdf">Dr. D. Prabha</a></p><br>
+                                <p class = "teacher_designation">Associate Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Data mining</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601458</p>
+                                <p><span class = "fa fa-envelope"></span> prabha@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/8.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/8.pdf">Mr. V. Muneeswaran</a></p><br>
+                                <p class = "teacher_designation">Associate Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Inforamtion Security</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601459</p>
+                                <p><span class = "fa fa-envelope"></span> muneeswaranv@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/9.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/9.pdf">Ms. K. Devipriya</a></p><br>
+                                <p class = "teacher_designation">Associate Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>DBMS</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601461</p>
+                                <p><span class = "fa fa-envelope"></span> devipriya@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/10.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/10.pdf">Dr. K. Manikandan</a></p><br>
+                                <p class = "teacher_designation">Associate Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Image processing and machine learning</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601462</p>
+                                <p><span class = "fa fa-envelope"></span> manikandank@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/11.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/11.pdf">Mr. R. Balaji</a></p><br>
+                                <p class = "teacher_designation">Associate Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Digital Image Processing</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601464</p>
+                                <p><span class = "fa fa-envelope"></span> balajir@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/12.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/12.pdf">Ms.R.Madhumitha</a></p><br>
+                                <p class = "teacher_designation">Associate Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Artificial Intelligence,Semantic Web,NLP</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601829</p>
+                                <p><span class = "fa fa-envelope"></span> madhumitha@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/13.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/13.pdf">Mr. A. Arunkumar</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Big Data, Software Engineering</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601466</p>
+                                <p><span class = "fa fa-envelope"></span> arunkumara@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/14.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/14.pdf">Ms. N.Kousika</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Data Mining</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601470</p>
+                                <p><span class = "fa fa-envelope"></span> kousika@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/15.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/15.pdf">Ms. P.Chitra</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b> Wireless Networks</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601468</p>
+                                <p><span class = "fa fa-envelope"></span> chitrap@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/16.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/16.pdf">Ms. D.Mansoor Hussain</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>cBig Data,DBMS</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601471</p>
+                                <p><span class = "fa fa-envelope"></span> mansoorhussain@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/17.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/17.pdf">Ms. M Karthikeyan</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Software Engineering</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601473</p>
+                                <p><span class = "fa fa-envelope"></span> karthikeyanm@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/18.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/18.pdf">Mr. S.Sudhakar Ilango</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Image Compression</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601474</p>
+                                <p><span class = "fa fa-envelope"></span> sudhakarilango@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/19.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/19.pdf">Ms. A.Sumithra</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Information Security</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601475</p>
+                                <p><span class = "fa fa-envelope"></span> sumithraa@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/20.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/20.pdf">Ms. K.Mageswari</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Network Security,Web Technology</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601478</p>
+                                <p><span class = "fa fa-envelope"></span> mageswarik@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/21.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/21.pdf">Ms.S.Mohana Gowri</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Network Security</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601479</p>
+                                <p><span class = "fa fa-envelope"></span> mohanagowris@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/22.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/22.pdf">Ms. D.Ramya</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>web technology</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601481</p>
+                                <p><span class = "fa fa-envelope"></span> ramya@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+
+                         <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/23.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/23.pdf">Ms. M.Indira Priyadharshini</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Data Mining</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601482</p>
+                                <p><span class = "fa fa-envelope"></span> indirapriyadharshinim@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/24.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/24.pdf">Ms. S. Shunmuga Priya</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Networks and Data Structure</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601484</p>
+                                <p><span class = "fa fa-envelope"></span> shunmugapriyas@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/25.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/25.pdf">Ms. S.Pradeepa</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Database and Data Mining</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601485</p>
+                                <p><span class = "fa fa-envelope"></span> pradeepas@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/26.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/26.pdf">Ms. B. Sophia</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Image Processing,Machine Learning</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601486</p>
+                                <p><span class = "fa fa-envelope"></span> sophiab@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/27.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/27.pdf">Ms. M.Rohini</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Programming and Data structures,Wireless sensor Networks</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601487</p>
+                                <p><span class = "fa fa-envelope"></span> rohinim@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/28.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/28.pdf">Ms. P. Anitha</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Database and Data Mining</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601489</p>
+                                <p><span class = "fa fa-envelope"></span> anithap@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/29.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/29.pdf">Ms. S.Deepika</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Information security</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601490</p>
+                                <p><span class = "fa fa-envelope"></span> deepikas@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/30.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/30.pdf">Ms. V. R. Azhaguramyaa</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Networks & Security</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601493</p>
+                                <p><span class = "fa fa-envelope"></span> azhaguramyaa@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/31.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/31.pdf">Ms. SudhaRani.S</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Networking</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601819</p>
+                                <p><span class = "fa fa-envelope"></span> sudharanis@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/32.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/32.pdf">Ms. K. Senathipathi</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Web technology</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601823</p>
+                                <p><span class = "fa fa-envelope"></span> senathipathik@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/33.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/33.pdf">Ms. M. Nithya</p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Networking</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601828</p>
+                                <p><span class = "fa fa-envelope"></span> nithyame@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/34.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/34.pdf">Ms. S. Dhivya</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>data mining</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601827</p>
+                                <p><span class = "fa fa-envelope"></span> dhivyas@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/35.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/35.pdf">Ms. R. Keerthi</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Networks</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601826</p>
+                                <p><span class = "fa fa-envelope"></span> keerthir@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/36.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/36.pdf">Ms. Sharmila J</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Data Mining</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601888</p>
+                                <p><span class = "fa fa-envelope"></span> sharmillaj@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/37.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/37.pdf">Ms. M. Anandapriya</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Data Mining with Big Data Analytics</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402601927</p>
+                                <p><span class = "fa fa-envelope"></span> anandapriyam@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+
+                        <div class = "row">
+                            <div class = "image" style = "background-image: url('images/cse/38.jpg');"></div>
+                            <div class = "details">
+                                <p class = "teacher_title"><a href = "http://www.skcet.ac.in/departments/images/cse/38.pdf">Ms. Pooranam</a></p><br>
+                                <p class = "teacher_designation">Assistant Professor</p>
+                                <p class = "working_on"><b>Area of Specialization  : </b>Big data</p>
+                            </div>
+                            <div class = "contact">
+                                <br><br>
+                                
+                                <p><span class = "fa fa-phone"></span> 7402604023</p>
+                                <p><span class = "fa fa-envelope"></span> Pooranamn@skcet.ac.in</p>
+                            </div>
+                        </div>
+
+                      
+                </div>
+                </div> -->
+                
+                <div id = "dept_student_achievements">
+                    <p class = "title">Student Achievements</p>
+                    <br>
+                    <table class = "table table-striped table-bordered">
+                        <tr>
+                            <td>S.No.</td>
+                            <td>Student Name</td>
+                            <td>Class</td>
+                            <td>Event</td>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>Sai Daya Shankar G</td>
+                            <td>III CSE C</td>
+                            <td>Coding Contest - Sri Eashwar College</td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>Shiv Ashwath</td>
+                            <td>III CSE C</td>
+                            <td>Coding Contest - Sri Eashwar College</td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>Sangamithra A.K, Sandhya S</td>
+                            <td>III CSE C</td>
+                            <td>Paper Presentation - CIT</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id = "dept_symposium">
+                    <p class = "title">Symposium and Conferences</p>
+                    <br>
+                    
+                </div>
+                
+                <div id = "dept_contact">
+                    <p class = "title">Contact</p>
+                    <br>
+                    <p class = "paragraph">
+                        Dr SJK Jagadeesh Kumar,<br>
+                        Professor and Head,<br>
+                        Department of Computer Science and Engineering,<br>
+                        Sri Krishna College of Engineering and Technology,<br>
+                        Kuniamuthur,<br>
+                        Coimbatore - 641 008,<br>
+                        TamilNadu, India.<br>
+
+                        Office Working Hours : 08.45 AM to 05.30 PM<br><br>
+                        
+                        <span class = "fa fa-phone"></span> 0422 2678015<br>
+                        <span class = "fa fa-phone"></span> 0422 2678001 - (7 Lines)<br>
+                        <span class = "fa fa-envelope"></span> sjkjk@skcet.ac.in<br>
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+
+<link rel = "stylesheet" href = "http://www.skcet.ac.in/css/footer.css">
+
+<footer>
+    <div class = "flex">
+
+        <div class = "border first">
+            <img src = "http://www.skcet.ac.in/images/footer%20logo.png" width = "80%"><br><br>
+            
+            <p><span class = "fa fa-map-marker"></span>Coimbatore, Tamil Nadu.</p><br>
+            <p><span class = "fa fa-phone"></span>0422-2678001 (7 Lines)</p><br><br>
+            <a href = "https://www.facebook.com/skcetofficial/"><img src = "http://www.skcet.ac.in/images/social/fb.png" width = "32px"></a>
+            <a href = "#"><img src = "http://www.skcet.ac.in/images/social/twitter.png" width = "32px"></a>
+            <a href = "mailto:info@skcet.ac.in"><img src = "http://www.skcet.ac.in/images/social/gmail.png" width = "32px"></a>
+            <a href = "https://www.instagram.com/skcet.official/"><img src = "http://www.skcet.ac.in/images/social/insta.png" width = "32px"></a>
+        </div>
+
+        <div class = "links border">
+            <p>Sri Krishna Institutions</p>
+            <p><a href = "http://skct.edu.in">Sri Krishna College of Technology</a></p>
+            <p><a href = "http://skasc.ac.in">Sri Krishna Arts and Science College</a></p>
+            <p><a href = "http://skacas.ac.in">Sri Krishna Adithya College of Arts and Science</a></p>
+            <p><a href = "http://skptc.srikrishna.ac.in">Sri Krishna Polytechnic College</a></p>
+        </div>
+
+        <div class = "links border">
+            <p>Links</p>
+            <p><a href = "http://naac.gov.in">NAAC</a></p>
+            <p><a href = "http://nbaind.org">NBA</a></p>
+            <p><a href = "http://aicte-india.org">AICTE</a></p>
+            <p><a href = "http://ugc.ac.in">UGC</a></p>
+            <p><a href = "http://annauniv.edu">Anna University</a></p>
+        </div>
+
+        <div class = "links last">
+            <p>Links</p>
+            
+            <p><a href = "http://www.skcet.ac.in/pdf/skcetib2016.pdf">College Brochure</a></p>
+            <p><a href = "http://www.skcet.ac.in/pdf/placerec.jpg">Placement Record</a></p>
+            <p><a href = "http://www.skcet.ac.in/pdf/servicerules.pdf">Service Rule Book</a></p>
+            <p><a href = "http://www.skcet.ac.in/pdf/leaverules.pdf">Leave Rules</a></p>
+            <p><a href = "http://www.skcet.ac.in/pdf/aqar_report_15_16.pdf">AQAR Report 2015-16</a></p>
+            <p><a href = "http://www.skcet.ac.in/nirf.php">NIRF Data Sheet</a></p>
+            <p><a href = "https://skcet.almaconnect.com/signin">SKCET-Alma Connect</a></p>
+            
+        </div>
+
+    </div>
+</footer>
+<div class = "bottom_bar">
+    <p>&copy; 2017. All Rights Reserved. SKCET. Designed and Maintained by <a href = "http://www.skcet.ac.in/team.php">Web Team</a>, SKCET.</p>
+</div>    </body>
+    
+</html>
